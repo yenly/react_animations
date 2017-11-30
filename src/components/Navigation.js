@@ -10,6 +10,7 @@ export default class Navigation extends Component {
         <nav className={styles.header_Navigation}>
           <NavLink exact to='/'>Home</NavLink>
           <NavLink to='/projects'>Projects</NavLink>
+          <NavLink to='/waapi'>Web Animation Test</NavLink>
           <NavLink to='/idontexist'>Not Found</NavLink>
         </nav>
       </div>

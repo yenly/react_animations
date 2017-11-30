@@ -2,3 +2,27 @@
   width: 80vw;
   margin: 75px auto;
 }
+
+.fade-appear,
+.fade-enter,
+.fadeE {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active,
+.fadeEA {
+  transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.fade-exit,
+.fadeO {
+  transition: opacity .2s linear;
+  opacity: 1;
+}
+
+.fade-exit-active,
+.fadeOA {
+  opacity: 0;
+}

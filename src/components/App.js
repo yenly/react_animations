@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navigation from './Navigation';
 import Projects from './Projects';
+import Waapi from './Waapi';
 import Home from './Home';
 import NotFound from './NotFound';
 
@@ -14,13 +15,14 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          <div className={styles.container}>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/projects' render={ () => <Projects /> } />
-              <Route component={NotFound} />
-            </Switch>
-          </div>
+            <div className={styles.container}>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route path='/projects' component={Projects} />
+                <Route path='/waapi' component={Waapi} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
         </div>
       </BrowserRouter>
     )
