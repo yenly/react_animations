@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+// import { BrowserRouter as Router } from 'react-router-dom'
 
-import Test from './components/Test';
 
-ReactDOM.render(<Test />, document.getElementById('root'));
+import App from './components/App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
