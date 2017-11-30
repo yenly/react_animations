@@ -24,26 +24,6 @@ class Waapi extends Component {
     }
   }
 
-  // onPlay() {
-  //   console.log('Basic Group example: Play event');
-  // }
-  //
-  // onFinish() {
-  //   console.log('Basic Group example: Finish event');
-  // }
-  //
-  // onCancel() {
-  //   console.log('Basic Group example: Cancel event');
-  // }
-  //
-  // onPause() {
-  //   console.log('Basic Group example: Pause event');
-  // }
-  //
-  // onReverse() {
-  //   console.log('Basic Group example: Reverse event');
-  // }
-
   getKeyFrames () {
     return [
       { transform: 'scale(1)',    opacity: 1,     offset: 0 },
