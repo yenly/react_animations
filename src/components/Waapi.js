@@ -95,9 +95,10 @@ class Waapi extends Component {
         <h3>Another Group using Map</h3>
         <AnimationGroup>
           {
-            cards.map((card) => (
+            cards.map((card, i) => (
               <Animatable.div
                 id={card}
+                key={i}
                 keyframes={this.getKeyFrames()}
                 timing={this.getTiming(card*300)}>
                 <Card post={post} />
