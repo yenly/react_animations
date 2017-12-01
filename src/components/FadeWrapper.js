@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Animated, AnimationGroup, Animatable } from 'react-web-animation';
+import { Animated } from 'react-web-animation';
 
 import styles from './FadeWrapper.module.scss'
 

@@ -1,4 +1,9 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+
+  &_Section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
