@@ -3,4 +3,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  &_Section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }

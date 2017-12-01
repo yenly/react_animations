@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FadeWrapper from './FadeWrapper'
-// import FadeGroup from './FadeGroup'
+import FadeGroup from './FadeGroup'
 
 import Card from './Card'
 
@@ -34,8 +34,12 @@ class Projects extends Component {
             <Card post={post} />
             <Card post={post} />
             <Card post={post} />
+            <Card post={post} />
+            <Card post={post} />
           </div>
         </FadeWrapper>
+        <h3>Example of FadeGroup with staggered time</h3>
+        <FadeGroup cards={[<Card post={post} />, <Card post={post} />, <Card post={post} />]} />
       </div>
     )
   }
