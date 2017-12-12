@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import Projects from './Projects';
 import Waapi from './Waapi';
 import Home from './Home';
+import ImageLoader from './ImageLoader';
 import NotFound from './NotFound';
 
 import styles from './App.module.scss'
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route exact path='/' component={Home} />
                 <Route path='/projects' component={Projects} />
                 <Route path='/waapi' component={Waapi} />
+                <Route path='/images' component={ImageLoader} />
                 <Route component={NotFound} />
               </Switch>
             </div>
