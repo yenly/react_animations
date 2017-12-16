@@ -26,28 +26,53 @@ class Waapi extends Component {
 
   getKeyFrames () {
     return [
-      { transform: 'scale(1)',    opacity: 1,     offset: 0 },
-      { transform: 'scale(.5)',   opacity: 0.5,   offset: 0.3 },
-      { transform: 'scale(.667)', opacity: 0.667, offset: 0.7875 },
-      { transform: 'scale(.6)',   opacity: 0.6,   offset: 1 }
+      { transform: 'scale(110%)',    opacity: 0 },
+      { transform: 'scale(100%)',   opacity: 1 }
     ]
   }
 
   getTiming (duration) {
     return {
       duration,
-      easing: 'ease-in-out',
+      easing: 'ease-in',
       delay: 0,
-      iterations: 2,
-      direction: 'alternate',
+      iterations: 1,
+      direction: 'normal',
       fill: 'forwards'
     }
   }
   render () {
     const cards = [ 1, 2, 3, 4, 5, 6 ]
     return (
-      <div className={styles.board}>
+      <div className={styles.main}>
         <h1>Web Animation Examples</h1>
+
+        <h3>Example 1</h3>
+        <div className={styles.main_Section}>
+          {/* <Card post={post} />
+          <Card post={post} />
+          <Card post={post} />
+          <Card post={post} />
+          <Card post={post} /> */}
+          {
+            cards.map((card, i) => (
+              <Animated.div
+                key={i}
+                keyframes={this.getKeyFrames()}
+                timing={this.getTiming(500+(i*500))}>
+                <Card post={post} />
+              </Animated.div>
+            ))
+          }
+        </div>
+        <h3>Example 2</h3>
+        <div className={styles.main_Section}>
+          <Card post={post} />
+          <Card post={post} />
+          <Card post={post} />
+          <Card post={post} />
+          <Card post={post} />
+        </div>
 
         <h3>Basic Example</h3>
         <Animated.div
@@ -57,35 +82,39 @@ class Waapi extends Component {
         </Animated.div>
 
         <h3>Group</h3>
-        <AnimationGroup>
-          <Animatable.div
-            id='1'
-            keyframes={this.getKeyFrames()}
-            timing={this.getTiming(2000)}>
-            <Card post={post} />
-          </Animatable.div>
-          <Animatable.div
-            id='2'
-            keyframes={this.getKeyFrames()}
-            timing={this.getTiming(4000)}>
-            <Card post={post2} />
-          </Animatable.div>
-        </AnimationGroup>
+        <div className={styles.main_Section}>
+          <AnimationGroup>
+            <Animatable.div
+              id='1'
+              keyframes={this.getKeyFrames()}
+              timing={this.getTiming(2000)}>
+              <Card post={post} />
+            </Animatable.div>
+            <Animatable.div
+              id='2'
+              keyframes={this.getKeyFrames()}
+              timing={this.getTiming(4000)}>
+              <Card post={post2} />
+            </Animatable.div>
+          </AnimationGroup>
+        </div>
 
         <h3>Another Group using Map</h3>
-        <AnimationGroup>
-          {
-            cards.map((card, i) => (
-              <Animatable.div
-                id={card}
-                key={i}
-                keyframes={this.getKeyFrames()}
-                timing={this.getTiming(card*300)}>
-                <Card post={post} />
-              </Animatable.div>
-            ))
-          }
-        </AnimationGroup>
+        <div className={styles.main_Section}>
+          <AnimationGroup>
+            {
+              cards.map((card, i) => (
+                <Animatable.div
+                  id={card}
+                  key={i}
+                  keyframes={this.getKeyFrames()}
+                  timing={this.getTiming(card*300)}>
+                  <Card post={post} />
+                </Animatable.div>
+              ))
+            }
+          </AnimationGroup>
+        </div>
       </div>
     )
   }

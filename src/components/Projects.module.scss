@@ -1,9 +1,1 @@
-.projects {
-  display: block;
-
-  &_Section {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-}
+@import '../styles/base';

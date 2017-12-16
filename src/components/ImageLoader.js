@@ -11,11 +11,11 @@ const post = {
 
 class ImageLoader extends Component {
   render () {
-    const cards = [ 1, 2, 3, 4, 5, 6 ]
+    // const cards = [ 1, 2, 3, 4, 5, 6 ]
     return (
-      <div className={styles.projects}>
+      <div className={styles.main}>
         <h3>Example 1</h3>
-        <div className={styles.projects_Section}>
+        <div className={styles.main_Section}>
           <Card post={post} />
           <Card post={post} />
           <Card post={post} />
@@ -23,7 +23,7 @@ class ImageLoader extends Component {
           <Card post={post} />
         </div>
         <h3>Example 2</h3>
-        <div className={styles.projects_Section}>
+        <div className={styles.main_Section}>
           <Card post={post} />
           <Card post={post} />
           <Card post={post} />

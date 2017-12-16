@@ -13,11 +13,15 @@ const post = {
 
 class Projects extends Component {
   render () {
-    const cards = [ 1, 2, 3, 4, 5, 6 ]
+    // const cards = [ 1, 2, 3, 4, 5, 6 ]
     return (
-      <div className={styles.projects}>
+      <div className={styles.main}>
+        <h3>Example of FadeGroup with staggered time</h3>
+        <div>
+          <FadeGroup cards={[<Card post={post} />, <Card post={post} />, <Card post={post} />]} />
+        </div>
         <h3>Example of FadeWrapper wrapping each card</h3>
-        <div className={styles.projects_Section}>
+        <div className={styles.main_Section}>
           <FadeWrapper>
             <Card post={post} />
           </FadeWrapper>
@@ -30,7 +34,7 @@ class Projects extends Component {
         </div>
         <h3>Example of FadeWrapper with multiple cards</h3>
         <FadeWrapper>
-          <div className={styles.projects_Section}>
+          <div className={styles.main_Section}>
             <Card post={post} />
             <Card post={post} />
             <Card post={post} />
@@ -38,8 +42,6 @@ class Projects extends Component {
             <Card post={post} />
           </div>
         </FadeWrapper>
-        <h3>Example of FadeGroup with staggered time</h3>
-        <FadeGroup cards={[<Card post={post} />, <Card post={post} />, <Card post={post} />]} />
       </div>
     )
   }
