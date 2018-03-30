@@ -12,6 +12,7 @@ export default class Navigation extends Component {
           <NavLink to='/projects'>Projects</NavLink>
           <NavLink to='/waapi'>Web Animation Test</NavLink>
           <NavLink to='/images'>ImageLoader</NavLink>
+          <NavLink to='/slideshows'>Slideshows</NavLink>
           <NavLink to='/idontexist'>Not Found</NavLink>
         </nav>
       </div>

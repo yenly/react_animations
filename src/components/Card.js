@@ -8,7 +8,9 @@ import styles from './Card.module.scss'
 const Card = ({ post }) => {
   return (
     <div className={styles.card}>
-      <a className={styles.card_Image} href='/' style={{ backgroundImage: 'url(' + borisSmallImg + ')' }} />
+      <a className={styles.card_Image} href='/' style={{ backgroundImage: 'url(' + borisSmallImg + ')' }}>
+      Test
+      </a>
       <div className={styles.card_TextWrapper}>
         <h1>{post.title}</h1>
         <p>{post.content}</p>
